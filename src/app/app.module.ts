@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { EstabelecimentoComponent } from './estabelecimento/estabelecimento.component';
 import { RouterModule } from '@angular/router';
 import { CadastrarEstabelecimentoComponent } from './estabelecimento/cadastrar/cadastrar.component';
+import { CadastrarProdutoComponent } from './produto/cadastrar/cadastrar-produto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstabelecimentoComponent,
-    CadastrarEstabelecimentoComponent
+    CadastrarEstabelecimentoComponent,
+    CadastrarProdutoComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,7 @@ import { CadastrarEstabelecimentoComponent } from './estabelecimento/cadastrar/c
     RouterModule.forRoot([
       {path: 'estabelecimento', component: EstabelecimentoComponent},
       {path: 'estabelecimento-cadastrar', component: CadastrarEstabelecimentoComponent},
+      {path: 'produto-cadastrar', component: CadastrarProdutoComponent},
     ]),
   ],
   providers: [],

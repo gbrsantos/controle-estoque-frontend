@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <h1>Inscrição de bootcamp</h1>
+    <form #estabelecimentoForm="ngForm" (ngSubmit)="submeterForm()">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" name="usuario" id="nome" class="form-control" [(ngModel)]="produtoModel.nome">
+      </div> 
+      <div class="form-group">
+        <label for="nome">Valor</label>
+        <input type="text" name="usuario" id="nome" class="form-control" [(ngModel)]="produtoModel.valor">
+      </div>         
+      <button type="submit" class="btn btn-primary">Confirmar</button>
+    </form>
+</div>
