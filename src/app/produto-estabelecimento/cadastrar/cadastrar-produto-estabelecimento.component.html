@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <h1>Inscrição de bootcamp</h1>
+    <form #estabelecimentoForm="ngForm" (ngSubmit)="submeterForm()">
+      <div class="form-group">
+        <select class="form-select" aria-label="Default select example" name="estabelecimento" id="" [(ngModel)]="estebelecimentoProdutoModel.estabelecimento">
+          <option selected>Estabelecimento:</option>
+          <option *ngFor="let estabelecimento of estabelecimentos" >{{estabelecimento.nome}}</option>
+        </select>
+      </div>  
+      <div class="form-group">
+        <select class="form-select" aria-label="Default select example" name="topico" id="" [(ngModel)]="estebelecimentoProdutoModel.produto">
+          <option selected>Produto:</option>
+          <option [value]= "produto" *ngFor="let produto of produtos" >{{produto.nome}}</option>
+        </select>
+      </div>   
+      <button type="submit" class="btn btn-primary">Confirmar</button>
+    </form>
+</div>

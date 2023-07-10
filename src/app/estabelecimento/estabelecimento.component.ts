@@ -20,7 +20,7 @@ export class EstabelecimentoComponent {
     let result;  
     this.estabelecimentoService.getAll().subscribe(data =>{
       result = data as any;
-      this.estabelecimentos = result.produtos?.slice();
+      this.estabelecimentos = result.estabelecimentos?.slice();
     });     
   } 
 }

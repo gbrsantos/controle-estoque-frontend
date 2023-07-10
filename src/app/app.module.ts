@@ -7,13 +7,15 @@ import { EstabelecimentoComponent } from './estabelecimento/estabelecimento.comp
 import { RouterModule } from '@angular/router';
 import { CadastrarEstabelecimentoComponent } from './estabelecimento/cadastrar/cadastrar.component';
 import { CadastrarProdutoComponent } from './produto/cadastrar/cadastrar-produto.component';
+import { CadastrarProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadastrar/cadastrar-produto-estabelecimento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstabelecimentoComponent,
     CadastrarEstabelecimentoComponent,
-    CadastrarProdutoComponent
+    CadastrarProdutoComponent,
+    CadastrarProdutoEstabelecimentoComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { CadastrarProdutoComponent } from './produto/cadastrar/cadastrar-produto
       {path: 'estabelecimento', component: EstabelecimentoComponent},
       {path: 'estabelecimento-cadastrar', component: CadastrarEstabelecimentoComponent},
       {path: 'produto-cadastrar', component: CadastrarProdutoComponent},
+      {path: 'estabelecimento-produto', component: CadastrarProdutoEstabelecimentoComponent},
     ]),
   ],
   providers: [],
