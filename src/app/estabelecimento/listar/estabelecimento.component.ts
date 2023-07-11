@@ -1,6 +1,6 @@
 import { Component, Output } from '@angular/core';
-import { EstabelecimentoService } from '../service/estabelecimento/estabelecimento.service';
-import { Estabelecimento } from '../model/estabelecimento';
+import { EstabelecimentoService } from '../../service/estabelecimento/estabelecimento.service';
+import { Estabelecimento } from '../../model/estabelecimento';
 import { Observable } from 'rxjs';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute, Router } from '@angular/router';
