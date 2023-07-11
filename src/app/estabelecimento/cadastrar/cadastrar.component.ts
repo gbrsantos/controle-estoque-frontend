@@ -10,7 +10,8 @@ import { EstabelecimentoService } from 'src/app/service/estabelecimento/estabele
 export class CadastrarEstabelecimentoComponent {
 
   constructor(
-    private estabelecimentoService : EstabelecimentoService
+    private estabelecimentoService : EstabelecimentoService,
+    
   ){}
   estebelecimentoModel = new Estabelecimento()
 
@@ -23,5 +24,5 @@ export class CadastrarEstabelecimentoComponent {
         }, 
         error: (err) => {alert(err)}
       })
-  }
+  }  
 }

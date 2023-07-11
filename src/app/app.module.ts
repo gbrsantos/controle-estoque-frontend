@@ -8,6 +8,9 @@ import { RouterModule } from '@angular/router';
 import { CadastrarEstabelecimentoComponent } from './estabelecimento/cadastrar/cadastrar.component';
 import { CadastrarProdutoComponent } from './produto/cadastrar/cadastrar-produto.component';
 import { CadastrarProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadastrar/cadastrar-produto-estabelecimento.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { ProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadastrar/listar/produto-estabelecimento.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { CadastrarProdutoEstabelecimentoComponent } from './produto-estabelecime
     EstabelecimentoComponent,
     CadastrarEstabelecimentoComponent,
     CadastrarProdutoComponent,
-    CadastrarProdutoEstabelecimentoComponent
+    CadastrarProdutoEstabelecimentoComponent,
+    ProdutoEstabelecimentoComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,9 @@ import { CadastrarProdutoEstabelecimentoComponent } from './produto-estabelecime
       {path: 'estabelecimento-cadastrar', component: CadastrarEstabelecimentoComponent},
       {path: 'produto-cadastrar', component: CadastrarProdutoComponent},
       {path: 'estabelecimento-produto', component: CadastrarProdutoEstabelecimentoComponent},
+      {path: 'produtos', component: ProdutoEstabelecimentoComponent},
     ]),
+    FontAwesomeModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

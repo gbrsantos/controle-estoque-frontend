@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Estabelecimento: </label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail" [value]="estabelecimento.nome">
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Valor</th>
+        <th>actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of estabelecimento.produtos">
+        <th scope="row">{{produto?.id}}</th>
+        <td>{{produto?.nome}}</td>
+        <td>{{produto.valor}}</td>
+        <td><fa-icon routerLink="../estabelecimento-cadastrar" [icon]="faMagnifyingGlass"></fa-icon></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

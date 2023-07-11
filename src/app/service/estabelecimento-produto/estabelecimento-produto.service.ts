@@ -12,7 +12,6 @@ export class EstabelecimentoProdutoService {
   constructor(private http: HttpClient) { }
   private url_base: string = 'http://127.0.0.1:5000'
   
-
   save(form : EstabelecimentoProduto) {
     return this.http.post(this.url_base + "/estabelecimento-produto", form)
     .pipe(

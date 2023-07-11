@@ -19,6 +19,9 @@ export class EstabelecimentoService {
         catchError(this.handleError)
     );
   }
+  getById(id:number) {
+    return this.http.get(this.url_base + `/estabelecimento?${id}`);
+  }
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

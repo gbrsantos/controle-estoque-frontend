@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from './user';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,5 @@ export class AppComponent {
     console.log(this.userModel);
     
   }
+  faCoffe = faCoffee
 }
