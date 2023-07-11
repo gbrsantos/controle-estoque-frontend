@@ -3,3 +3,8 @@
     justify-content: space-evenly;
     margin-top: 100px;
 }
+
+.lupa:hover{
+    cursor: pointer;
+    font-size: 17px;
+}
