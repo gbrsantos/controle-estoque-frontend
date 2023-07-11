@@ -1,6 +1,6 @@
 import { Component, Output } from '@angular/core';
 import { Observable } from 'rxjs';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { EstabelecimentoService } from 'src/app/service/estabelecimento/estabelecimento.service';
 import { Estabelecimento } from 'src/app/model/estabelecimento';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -19,6 +19,7 @@ export class ProdutoEstabelecimentoComponent {
   ){}  
   estabelecimento: Estabelecimento = {};
   faMagnifyingGlass = faMagnifyingGlass
+  faPlus = faPlus
   verificar: boolean = false;
   id:number = 0;
   ngOnInit() { 
