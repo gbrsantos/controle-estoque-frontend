@@ -10,6 +10,8 @@ import { CadastrarProdutoComponent } from './produto/cadastrar/cadastrar-produto
 import { CadastrarProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadastrar/cadastrar-produto-estabelecimento.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { ProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadastrar/listar/produto-estabelecimento.component';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { ProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadas
     CadastrarEstabelecimentoComponent,
     CadastrarProdutoComponent,
     CadastrarProdutoEstabelecimentoComponent,
-    ProdutoEstabelecimentoComponent
+    ProdutoEstabelecimentoComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { ProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadas
       {path: 'estabelecimento-produto', component: CadastrarProdutoEstabelecimentoComponent},
       {path: 'produtos', component: ProdutoEstabelecimentoComponent},
     ]),
-    FontAwesomeModule    
+    FontAwesomeModule,
+    MdbModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
