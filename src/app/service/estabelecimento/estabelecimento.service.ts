@@ -20,7 +20,11 @@ export class EstabelecimentoService {
     );
   }
   getById(id:number) {
-    return this.http.get(this.url_base + `/estabelecimento?${id}`);
+    return this.http.get(this.url_base + `/estabelecimento?id=${id}`);
+  }
+
+  deleteById(id:number) {
+    return this.http.delete(this.url_base + `/estabelecimento?id=${id}`);
   }
 
   private handleError(error: HttpErrorResponse) {

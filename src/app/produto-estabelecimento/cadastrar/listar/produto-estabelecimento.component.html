@@ -1,10 +1,13 @@
 <div class="container">
-  <div class="form-group row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Estabelecimento: </label>
-    <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" [value]="estabelecimento.nome">
+ <div>
+  <h1>Cadastrar Estabelecimento</h1>
+  <form #estabelecimentoForm="ngForm">
+    <div class="campos">
+      <label for="nome">Nome estabelecimento: </label>
+      <input disabled type="text" name="usuario" id="nome" class="form-control" [(ngModel)]="estabelecimento.nome">
     </div>
-  </div>
+  </form>
+  </div>  
   <table class="table">
     <thead>
       <tr>
