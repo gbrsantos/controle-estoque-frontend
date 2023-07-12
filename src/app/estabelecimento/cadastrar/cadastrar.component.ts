@@ -16,6 +16,8 @@ export class CadastrarEstabelecimentoComponent {
   estebelecimentoModel = new Estabelecimento()
 
   submeterForm(){
+    if(!this.estebelecimentoModel.nome)
+      return alert("Por favor, preencher o campo nome!");
     this.estabelecimentoService.save(this.estebelecimentoModel).subscribe(
       {
         next: (estabelecimento) => {

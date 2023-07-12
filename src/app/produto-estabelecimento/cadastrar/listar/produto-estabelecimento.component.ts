@@ -95,7 +95,8 @@ export class ProdutoEstabelecimentoComponent {
   }
 
   salvarProdutoEstabelecimento(estebelecimentoProduto: EstabelecimentoProduto){
-    console.log("tentando salvar",estebelecimentoProduto);
+    if(!estebelecimentoProduto || !estebelecimentoProduto?.id_estabelecimento || !estebelecimentoProduto?.id_produto)
+      return alert("Por favor, preencha todos os campos!")
     this.estabelecimentoProdutoService.save(estebelecimentoProduto).subscribe(
       {
         next: (estabelecimento) => {

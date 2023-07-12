@@ -17,7 +17,9 @@ export class CadastrarProdutoComponent {
   produtoModel = new Produto()
 
   submeterForm(){
-    this.produtoService.save(this.produtoModel).subscribe(
+    if((!this.produtoModel || !this.produtoModel.nome || !this.produtoModel.valor))
+        return alert("Por favor, preencher todos os campos!");
+    this.produtoService.save(this.produtoModel).subscribe(      
       {
         next: (produto) => {
           console.log(produto);

@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.texto-table{
+    text-align: center;
+}
+
+.separador{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
