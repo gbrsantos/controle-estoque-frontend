@@ -25,7 +25,10 @@ npm start
 ---
 ## Build e Serv com NPM
 
- `ng serve` 
+```
+ng serve
+
+```
  
-Navegue para `http://localhost:4200/`.
+Navegue para [http://localhost:4200/#/](http://localhost:4200/#/).
 
