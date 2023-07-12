@@ -21,7 +21,8 @@ export class CadastrarProdutoComponent {
       {
         next: (produto) => {
           console.log(produto);
-          alert("Estabelecimento salvo com sucesso")
+          this.produtoModel= {};
+          alert("Produto salvo com sucesso")
         }, 
         error: (err) => {alert(err)}
       })

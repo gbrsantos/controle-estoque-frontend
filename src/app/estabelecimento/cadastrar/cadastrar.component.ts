@@ -19,7 +19,7 @@ export class CadastrarEstabelecimentoComponent {
     this.estabelecimentoService.save(this.estebelecimentoModel).subscribe(
       {
         next: (estabelecimento) => {
-          console.log(estabelecimento);
+          this.estebelecimentoModel = {};
           alert("Estabelecimento salvo com sucesso")
         }, 
         error: (err) => {alert(err)}

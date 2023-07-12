@@ -7,7 +7,6 @@ import { EstabelecimentoComponent } from './estabelecimento/listar/estabelecimen
 import { RouterModule } from '@angular/router';
 import { CadastrarEstabelecimentoComponent } from './estabelecimento/cadastrar/cadastrar.component';
 import { CadastrarProdutoComponent } from './produto/cadastrar/cadastrar-produto.component';
-import { CadastrarProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadastrar/cadastrar-produto-estabelecimento.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { ProdutoEstabelecimentoComponent } from './produto-estabelecimento/cadastrar/listar/produto-estabelecimento.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -19,7 +18,6 @@ import { ModalComponent } from './components/modal/modal.component';
     EstabelecimentoComponent,
     CadastrarEstabelecimentoComponent,
     CadastrarProdutoComponent,
-    CadastrarProdutoEstabelecimentoComponent,
     ProdutoEstabelecimentoComponent,
     ModalComponent,
   ],
@@ -31,7 +29,6 @@ import { ModalComponent } from './components/modal/modal.component';
       {path: 'estabelecimento', component: EstabelecimentoComponent},
       {path: 'estabelecimento-cadastrar', component: CadastrarEstabelecimentoComponent},
       {path: 'produto-cadastrar', component: CadastrarProdutoComponent},
-      {path: 'estabelecimento-produto', component: CadastrarProdutoEstabelecimentoComponent},
       {path: 'produtos', component: ProdutoEstabelecimentoComponent},
     ]),
     FontAwesomeModule,

@@ -63,7 +63,11 @@ export class ProdutoEstabelecimentoComponent {
       {
         name: 'Vincular',
         class: 'btn btn-outline-primary',
-        fnc: () => this.salvarProdutoEstabelecimento(modalAvisoConclusaoProcesso.componentInstance.estebelecimentoProdutoModel),
+        fnc: () => {
+          this.salvarProdutoEstabelecimento(modalAvisoConclusaoProcesso.componentInstance.estebelecimentoProdutoModel)
+          modalAvisoConclusaoProcesso.componentInstance.estebelecimentoProdutoModel = {}
+        }
+          ,
       },
      
     ];
@@ -97,9 +101,9 @@ export class ProdutoEstabelecimentoComponent {
         next: (estabelecimento) => {
           this.estabelecimentoService.getById(this.id).subscribe(data =>{      
           this.estabelecimento = data;
+        
           });
-          console.log(estabelecimento);
-          alert("Estabelecimento Produto salvo com sucesso")
+          alert("Estabelecimento vinculado ao produto com sucesso")
         }, 
         error: (err) => {alert(err)}
       })
