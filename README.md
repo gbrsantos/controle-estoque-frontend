@@ -23,7 +23,7 @@ Feito isso, será possível startar o servidor rodando o seguinte comando:
 npm start
 ```
 ---
-## Build e Serv com NPM
+## Build e Serv com NG
 
 ```
 ng serve
