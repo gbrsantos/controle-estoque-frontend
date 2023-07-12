@@ -3,7 +3,7 @@ import { Produto } from "./produto";
 
 export class EstabelecimentoProduto {
     constructor(
-        public estabelecimento?: Estabelecimento,
-        public produto? : Produto
+        public id_estabelecimento?: number,
+        public id_produto? : number
     ){}  
 }

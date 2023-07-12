@@ -21,35 +21,4 @@ export class CadastrarProdutoEstabelecimentoComponent {
   estebelecimentoProdutoModel = new EstabelecimentoProduto()
   estabelecimentos: Estabelecimento[] =[];
   produtos: Produto[] =[];
-
-  ngOnInit() {
-    this.preencherEstabelecimentos();   
-    this.preencherProdutos();       
-  } 
-
-  private preencherEstabelecimentos() {
-    let result;
-    this.estabelecimentoService.getAll().subscribe(data => {
-      result = data as any;
-      this.estabelecimentos = result.estabelecimentos?.slice();
-    });
-  }
-  private preencherProdutos() {
-    let result;
-    this.produtoService.getAll().subscribe(data => {
-      result = data as any;
-      this.produtos = result.produtos?.slice();
-    });
-  }
-
-  submeterForm(){
-    this.estabelecimentoProdutoService.save(this.estebelecimentoProdutoModel).subscribe(
-      {
-        next: (estabelecimento) => {
-          console.log(estabelecimento);
-          alert("Estabelecimento salvo com sucesso")
-        }, 
-        error: (err) => {alert(err)}
-      })
-  }
 }

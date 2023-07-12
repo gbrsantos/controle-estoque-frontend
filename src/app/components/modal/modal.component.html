@@ -1,0 +1,38 @@
+<div >
+    <div class="modal-header">
+        <h5 class="modal-title" id="modal-basic-title">{{ title }}</h5>
+        <fa-icon (click)="modal.dismiss()" class="lupa" [icon]="faClose">
+        </fa-icon>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluir">
+            <form #estabelecimentoForm="ngForm">
+                <div class="form-group">
+                    <label for="estabelecimento">Selecione um estabelecimento</label>
+                    <select class="form-select" aria-label="Default select example" name="estabelecimento" id=""
+                        [(ngModel)]="estebelecimentoProdutoModel.id_estabelecimento">
+                        <option [value]="estabelecimento.id" *ngFor="let estabelecimento of estabelecimentos">
+                            {{estabelecimento.nome}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="produto">Selecione um produto</label>
+                    <select class="form-select" aria-label="Default select example" name="produto" id=""
+                        [(ngModel)]="estebelecimentoProdutoModel.id_produto">
+                        <option [value]="produto.id" *ngFor="let produto of produtos">{{produto.nome}}</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div [hidden]="!buttons.length && !showCancelBtn" class="modal-footer">
+        <ng-container *ngIf="buttons.length">
+            <button *ngFor="let button of buttons" [classList]="button.class" (click)="button.fnc()">
+                {{ button.name }}
+            </button>
+        </ng-container>
+        <ng-container *ngIf="showCancelBtn">
+            <button type="button" class="btn" (click)="modal.dismiss()">Cancelar</button>
+        </ng-container>
+    </div>
+</div>
